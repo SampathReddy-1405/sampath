@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampath Reddy | Cybersecurity Enthusiast & AI Enthusiast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a2e;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #0f3460;
+        }
+        .navbar-brand, .nav-link {
+            color: #eaeaea !important;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            color: #eaeaea;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .section {
+            padding: 3rem 0;
+        }
+        .btn-custom {
+            background-color: #e94560;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: 600;
+        }
+        .btn-custom:hover {
+            background-color: #e94590;
+        }
+        .card-custom {
+            background-color: #16213e;
+            border: none;
+            color: #eaeaea;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-custom:hover {
+            transform: translateY(-10px);
+            background-color: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Sampath Reddy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div>
+            <h1>Sampath Reddy</h1>
+            <p>Cybersecurity Undergraduate & AI Enthusiast</p>
+            <a href="#projects" class="btn btn-custom mt-4">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section text-center">
+        <div class="container">
+            <h2 class="display-4">About Me</h2>
+            <p class="mt-3">I am a cybersecurity undergraduate with a passion for artificial intelligence. I enjoy exploring new technologies and leveraging my skills to build secure and innovative solutions.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="display-4 text-center">Projects</h2>
+            <div class="row mt-4">
+                <!-- Project Card -->
+                <div class="col-md-4">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">A description of my project in cybersecurity or AI that highlights key skills and results.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat similar structure for other projects -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section text-center">
+        <div class="container">
+            <h2 class="display-4">Contact Me</h2>
+            <p class="mt-3">Feel free to reach out if you want to discuss projects, collaborations, or just chat about tech!</p>
+            <a href="mailto:sample@example.com" class="btn btn-custom mt-3">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Sampath Reddy. All rights reserved.</p>
+    </footer>
+
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        gsap.from(".hero h1", { opacity: 0, y: -50, duration: 1 });
+        gsap.from(".hero p", { opacity: 0, y: 50, delay: 0.5, duration: 1 });
+        gsap.from(".btn-custom", { opacity: 0, scale: 0.5, delay: 1, duration: 1 });
+
+        gsap.from(".navbar-brand", { opacity: 0, x: -50, delay: 0.5, duration: 1 });
+        gsap.from(".nav-link", { opacity: 0, x: 50, delay: 0.5, stagger: 0.2, duration: 1 });
+
+        gsap.from(".card-custom", {
+            scrollTrigger: ".card-custom",
+            opacity: 0,
+            y: 50,
+            stagger: 0.3,
+            duration: 1
+        });
+    </script>
+</body>
+</html>
